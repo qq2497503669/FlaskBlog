@@ -1,1 +1,6 @@
 {% extends "base.html" %}
+{% block content %}
+    {% for author in posts %}
+        <div><p>{{ author.author.username }} 评论：<b>{{ author.body }}</b></p></div>
+    {% endfor %}
+{% endblock %}
